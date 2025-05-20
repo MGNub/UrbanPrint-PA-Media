@@ -8,13 +8,11 @@ div {
 }
 
 header {
-    height: 100vh;
+    height: 200vh;
     width: 100vw;
-    overflow: hidden;
+    /* overflow: hidden; */
     z-index: 1;
     display:flex;
-    justify-content : center;
-    align-items : center;
 }
 
 header div:nth-child(1) {
@@ -42,15 +40,20 @@ header div:nth-child(2) {
 }
 
 #head h1 {
+    position : fixed;
+    top : 50%;
+    left : 50%;
+    transform : translateY(-50%) translateX(-50%);
     margin : 0;
-    font-size : 10rem;
+    font-size : 0rem;
     animation : textPopIn 1.5s ease-in-out;
     font-family: GeistMono, sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
     color: var(--white);
     /* mix-blend-mode: difference; */
-    z-index: 1;
+    z-index: 0;
+    display : flex;
 }
 
 @keyframes topHalf {
@@ -89,6 +92,11 @@ header div:nth-child(2) {
         height : 50vh;
         transform : translateX(100%);
     }
+}
+
+#head h1 span {
+    margin : 0;
+    font-size : 10rem;
 }
 
 @keyframes textPopIn {
@@ -183,6 +191,9 @@ video {
 .D {
     width: 150vw;
     height: 100vh;
+    display : flex;
+    align-items : center;
+    justify-content : center;
 }
 
 .A {
@@ -212,7 +223,7 @@ video {
     position: absolute;
     top: 30vh;
     left: 215vw;
-    width: 30vw;
+    width: 35vw;
     height: 60vh;
 }
 
@@ -220,7 +231,7 @@ video {
     position: absolute;
     top: 30vh;
     left: 365vw;
-    width: 30vw;
+    width: 35vw;
     height: 60vh;
 }
 
@@ -228,7 +239,7 @@ video {
     position: absolute;
     top: 30vh;
     left: 515vw;
-    width: 30vw;
+    width: 35vw;
     height: 60vh;
 }
 
@@ -236,7 +247,7 @@ video {
     position: absolute;
     top: 30vh;
     left: 65vw;
-    width: 30vw;
+    width: 35vw;
     height: 60vh;
 }
 
@@ -266,4 +277,5 @@ video {
 
 footer {
     margin-top: 30vh;
+    padding-top : 30vh;
 }
