@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Issues - Urban Print</title>
+    <link rel="icon" href="../Defaults/cityPrintFavicon.png" type="image/png">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../Defaults/root.css">
+    <link rel="stylesheet" href="../Defaults/menu.css">
+    <link rel="stylesheet" href="../Defaults/footer.css">
+    <link rel="stylesheet" href="../Defaults/lenis.css">
+    <link rel="stylesheet" href="../Defaults/mobile.css">
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="logo"> Urban Print </div>
+        <button onclick="shift()">
+            <svg id="menuSVG" width="50" viewBox="0 0 100 100" fill="#000">
+                <rect class="top" width="60" height="5" x="20" y="30">
+                </rect>
+                <rect class="middle" width="60" height="5" x="20" y="50">
+                </rect>
+                <rect class="bottom" width="60" height="5" x="20" y="70">
+                </rect>
+            </svg>
+        </button>
+    </nav>
+    <div class="menu">
+        <a>
+            <div class="item" id="one">
+                <p>Home</p>
+            </div>
+        </a>
+        <a>
+            <div class="item" id="two">
+                <p class="current">Issues</p>
+            </div>
+        </a>
+        <a>
+            <div class="item" id="three">
+                <p>Solutions</p>
+            </div>
+        </a>
+        <a>
+            <div class="item" id="four">
+                <p>About</p>
+            </div>
+        </a>
+    </div>
+    <div class="start-animation" id="loadIn"></div>
+    <header>
+        <div class="container">
+            <!--displays column-->
+            <div id="left">
+                <h2 id="beforeText">BEFORE</h2>
+            </div>
+            <h2 id="afterText">AFTER</h2>
+            <div class='parentSticky'>
+                <h1 class="headerTitle">
+                    <p class="headerTitleP">ALASKAN WAY</p>
+                    <p class="headerTitleP">VIADUCT</p>
+                </h1>
+                <div class="childSticky">
+                    <p class="hidden">The Alaskan Way Viaduct was an elevated freeway in Downtown Seattle. While it transported many people through each day, there were many long standing issues with the viaduct.</p>
+                </div>
+                <div class="childSticky">
+                    <p class="hidden">It was incredibly noisy due to tens of thousands of cars crossing daily. It was very congested, often having slow traffic, and it blocked off access to the waterfront for decades, which limited pedestrian access and economic growth.</p>
+                </div>
+                <div class="childSticky">
+                    <p class="hidden">The viaduct was removed and replaced by a tunnel in November of 2019. Its demolition allowed more space to improve the waterfront, which were then dedicated towards a new park, walkways, and bike paths.</p>
+                </div>
+                <div class="childSticky">
+                    <p class="hidden">As a result, mobility and quality of life has improved in Downtown seattle, thanks to the creation of the tunnel and new developments after the viaduct removal.</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- <section></section> short fixed section WHICH YOU PREFER -->
+    <main>
+        <section class="section-one">
+            <h2 class="hidden">
+                <p style="color: var(--white)">WHICH ONE WOULD</p>
+                <p style="color: var(--white)"><b style="color: red">YOU</b> WANT TO LIVE IN?</p>
+            </h2>
+        </section>
+        <section class="lastSection">
+            <div class = "container1">
+                <div class = "textBox1">
+                    <h2>USA'S EXCESSIVE</h2>
+                    <h2>DEPENDENCE ON CARS</h2>
+                    <p>While the automobile has grown to be an American staple over the last century, there are many issues that came along with it. American society has grown extremely dependent on cars, and its cities have been designed and built around cars, making it nearly impossible to thrive in modern America without a motor vehicle.</p>
+                    <p>Attempting to sustain such a car-centric society is extremely costly. It comes at the heavy price of public health, highly congested and ugly roads, huge wastes of land, environmental harm, and much more.</p>
+                </div>
+                <img src="Images/parkingLot2.webp" alt="parking lot image">    
+            </div>
+        </section>
+        <section>
+            <footer>
+                <div class="top">
+                    <h1 id="h1-one">
+                        <span>U</span>
+                        <span>R</span>
+                        <span>B</span>
+                        <span>N</span>
+                        <span>P</span>
+                        <span>R</span>
+                        <span>N</span>
+                        <span>T</span>
+                    </h1>
+                </div>
+                <div class="bottom">
+                    <div id="bottom-one">
+                        <a href="../index.html">
+                            <p>Home</p>
+                        </a>
+                        <a href="../Issues/issues.html">
+                            <p>Issues</p>
+                        </a>
+                        <a href="../Solutions/solutions.html">
+                            <p>Solutions</p>
+                        </a>
+                        <a href="../About/about.html">
+                            <p>About</p>
+                        </a>
+                    </div>
+                    <div id="bottom-two">
+                        <p>Academy at Palumbo</p>
+                        <p>Philadelphia (City of Brotherly Love)</p>
+                    </div>
+                    <div id="bottom-three">
+                        <div class="text">
+                            <p>URBAN PRINT &nbsp;&nbsp; For More Walkable Cities &nbsp; </p>
+                        </div>
+                    </div>
+                    <div id="bottom-four">
+                        <button onclick="topFunction()">TOP</button>
+                    </div>
+                </div>
+            </footer>
+        </section>
+    </main>
+    
+</body>
+<script src="./script.js"></script>
+<script src="./reveal.js"></script>
+<script src="../Defaults/menu.js"></script>
+<script src="../Defaults/lenis.js"></script>
+
+</html>

@@ -1,0 +1,110 @@
+@media (max-width : 600px) {
+    header h1 div span {
+        font-size: calc((80vw - 60px) / 4);
+    }
+    header img {
+        position : absolute;
+    }
+    header #img-one {
+        top : 0;
+        left : 0;
+        width: 60vw;
+        grid-column: 2 / 8;
+        margin-top: 10vh;
+        z-index: 3;
+    }
+
+    header #img-two {
+        width: 100%;
+        grid-column: 10 / 16;
+        z-index: 3;
+    }
+
+    header #img-three {
+        width: 60vw;
+        grid-column: 4 / 16;
+        z-index: 1;
+    }
+
+    header #img-four {
+        width: 100%;
+        grid-column: 3 / 10;
+        z-index: 4;
+    }
+
+    header #img-five {
+        width: 80vw;
+        grid-column: 1 / 15;
+        z-index: 3;
+    }
+
+    header #img-six {
+        width: 100%;
+        grid-column: 5 / 11;
+        z-index: 3;
+    }
+
+    header #img-seven {
+        width: 90vw;
+        grid-column: 2 / 15;
+        z-index: 6;
+    }
+
+    header #img-eight {
+        width: 60vw;
+        grid-column: 3 / 17;
+        z-index: 5;
+        margin-bottom: 65vh;
+    }
+
+    header #img-nine {
+        width: 100%;
+        grid-column: 10 / 15;
+        margin-top: 15vh;
+        z-index: 2;
+    }
+
+    header #img-ten {
+        width: 100%;
+        grid-column: 10 / 15;
+        margin-top: 10vh;
+        z-index: 2;
+    }
+
+    header #img-eleven {
+        margin-top: 5vh;
+        width: 100%;
+        grid-column: 10 / 15;
+        z-index: 2;
+    }
+    #section-one {
+        width : 100vw;
+    }
+    #section-one .wrapper {
+        width : 100vw;
+        display : flex;
+        flex-direction : column;
+        align-items : center;
+    }
+    #section-one .wrapper .top {
+        display : flex;
+        justify-content : center;
+        width : 90vw;
+        text-align : center;
+    }
+    #section-one .wrapper .top h2 {
+        font-size : 10cqw;
+        line-height : 10cqw;
+    }
+    #section-one .wrapper .bottom {
+        display : flex;
+        justify-content : center;
+        flex-direction : column;
+        width : 80vw;
+    }
+    #section-one .wrapper .bottom h3 {
+        font-size : 8cqw;
+    }
+    #section-one .wrapper .bottom p {
+        font-size : 4.5cqw;
+    }

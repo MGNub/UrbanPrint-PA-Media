@@ -1,0 +1,38 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 4000px;
+}
+
+img {
+    max-width: 100%;
+}
+
+.images {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+}
+
+#img-one {
+    grid-column: 1 / 5;
+}
+
+#img-two {
+    grid-column: 4 / 7;
+}
+
+#img-three {
+    grid-column: 6 / 10;
+}
+
+#img-four {
+    grid-column: 3 / 15;
+}
+
+#img-five {
+    grid-column: 12 / 17;
+}

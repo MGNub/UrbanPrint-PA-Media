@@ -1,0 +1,172 @@
+footer {
+    position: relative;
+    display: grid;
+    width: 100%;
+    height: fit-content;
+    background-color: var(--white);
+    z-index: 100;
+}
+
+footer .top {
+    position : relative;
+    display: flex;
+    align-items: flex-end;
+    height: 50vh;
+    pointer-events: none;
+}
+
+footer .top h1 {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    color: var(--blue);
+    font-family: Geist-Light, sans-serif;
+    font-size: 18cqw;
+}
+
+footer .top h1 span {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 15vw;
+}
+
+footer .top #h1-one {
+    color: var(--blue);
+    text-shadow:
+        0 -6cqw #00123460,
+        0 -12cqw #00123430,
+        0 -18cqw #00123415,
+        0 -24cqw #00123410;
+
+}
+
+footer .top #h1-two {
+    color: #00123415;
+}
+
+footer .top #h1-three {
+    color: #00123430;
+}
+
+footer .top #h1-four {
+    color: #00123460;
+}
+
+footer .bottom {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    color: var(--blue);
+    margin: 20px;
+    height: fit-content;
+}
+
+footer .bottom #bottom-one {
+    grid-column: 1 / 5;
+    display: flex;
+    flex-direction: column;
+    gap : 1cqh;
+}
+
+footer .bottom #bottom-two {
+    grid-column: 5 / 9;
+}
+
+footer .bottom #bottom-three {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row: 1 / 3;
+    grid-column: 11 / 14;
+    width: 22vw;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+}
+
+footer .bottom #bottom-three::before {
+    content : "";
+    position: absolute;
+    display: flex;
+    width: 15vw;
+    height : 15vw;
+    border-radius: 50%;
+    background : url(../Icons/libertyBell.png);
+    background-size : 100%;
+    /* background-color : yellow; */
+}
+
+footer .bottom #bottom-four {
+    grid-column: 15 / 17;
+    grid-row: 1 / 3;
+}
+footer .bottom #bottom-one a {
+    text-decoration : none;
+    padding : 2vw 0;
+    width : 22vw;
+}
+footer .bottom #bottom-one a p {
+    border-bottom : 1px solid rgb(136, 136, 136);
+    transition : all 0.5s ease-in-out;
+    width : 22vw;
+    font-size: 1.4cqw;
+    color: var(--blue);
+}
+footer .bottom #bottom-one a:nth-child(1):hover p {
+    width : 4.1vw;
+}
+footer .bottom #bottom-one a:nth-child(2):hover p {
+    width : 4.7vw;
+}
+footer .bottom #bottom-one a:nth-child(3):hover p {
+    width : 6.3vw;
+}
+footer .bottom #bottom-one a:nth-child(4):hover p {
+    width : 4.2vw;
+}
+
+footer .bottom #bottom-two a,
+footer .bottom #bottom-three a {
+    font-size: 1.5cqw;
+    color: var(--blue);
+}
+
+footer .bottom #bottom-three .text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: spin 15s linear infinite;
+    font-family: GeistMono-Light;
+}
+
+footer .bottom #bottom-three .text span {
+    position: absolute;
+    left: 50%;
+    transform-origin: 0 11vw;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+footer .bottom #bottom-four button {
+    width: 100%;
+    height: 100%;
+    background-color: var(--blue);
+    color: var(--white);
+    border-radius: 10px;
+}
+
+footer .bottom #bottom-four button:hover {
+    width: 100%;
+    height: 100%;
+    background-color: var(--white);
+    color: var(--blue);
+    transition-duration : 0.2s;
+}

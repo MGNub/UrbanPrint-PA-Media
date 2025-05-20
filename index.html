@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Urban Print</title>
+    <link rel="icon" href="./Defaults/cityPrintFavicon.png" type="image/png">
+    <link rel="stylesheet" href="./Defaults/root.css">
+    <link rel="stylesheet" href="./Defaults/menu.css">
+    <link rel="stylesheet" href="./Defaults/footer.css">
+    <link rel="stylesheet" href="./Defaults/mobile.css">
+    <link rel="stylesheet" href="./Home/style.css">
+    <link rel="stylesheet" href="./Home/mobile.css">
+    <link rel="stylesheet" href="./Defaults/lenis.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            Urban Print
+        </div>
+        <button onclick="shift()">
+            <svg id="menuSVG" width="50" viewBox="0 0 100 100" fill="#000">
+                <rect class="top" width="60" height="5" x="20" y="30">
+                </rect>
+                <rect class="middle" width="60" height="5" x="20" y="50">
+                </rect>
+                <rect class="bottom" width="60" height="5" x="20" y="70">
+                </rect>
+            </svg>
+        </button>
+    </nav>
+    <div class="menu">
+        <a>
+            <div class="item" id="one">
+                <p class = "current">Home</p>
+            </div>
+        </a>
+        <a>
+            <div class="item" id="two">
+                <p>Issues</p>
+            </div>
+        </a>
+        <a>
+            <div class="item" id="three">
+                <p>Solutions</p>
+            </div>
+        </a>
+        <a>
+            <div class="item" id="four">
+                <p>About</p>
+            </div>
+        </a>
+    </div>
+    <div class="start-animation" id="loadIn"></div>
+    <header>
+        <h1>
+            <div id="one">
+                <span>UR PPL</span>
+            </div>
+            <div id="two">
+                <span>UR ROADS</span>
+            </div>
+            <div id="three">
+                <span>UR CITY</span>
+            </div>
+            <div id="four">
+                <span>UR CHOICE</span>
+            </div>
+        </h1>
+        <img id="img-one" data-scroll data-scroll-speed="0.5" src="./Home/img/city1.webp" alt="A woman walking on a road that faces the London Bridge.">
+        <img id="img-two" class="raised" data-scroll data-scroll-speed="0.7" src="./Home/img/city2.webp" alt="A schoolgirl walking in front of a building with an intricate wooden pattern.">
+        <img id="img-three" data-scroll data-scroll-speed="0.6" src="./Home/img/city3.webp" alt="A man walking his bike with a navy blue mural in the background.">
+        <img id="img-four" class="raised" data-scroll data-scroll-speed="0.6" src="./Home/img/city4.webp" alt="A low angle shot of a brick road in a city.">
+        <img id="img-five" data-scroll data-scroll-speed="0.5" src="./Home/img/city5.webp" alt="">
+        <img id="img-six" data-scroll data-scroll-speed="0.5" src="./Home/img/city6.webp" alt="">
+        <img id="img-seven" data-scroll data-scroll-speed="1" src="./Home/img/city7.webp" alt="">
+        <img id="img-eight" class="raised" data-scroll data-scroll-speed="0.7" src="./Home/img/city8.webp" alt="">
+        <img id="img-nine" class="raised" data-scroll data-scroll-speed="0.8" src="./Home/img/route-66.webp" alt="">
+        <img id="img-ten" class="raised" data-scroll data-scroll-speed="0.9" src="./Home/img/workzone.webp" alt="">
+        <img id="img-eleven" class="raised" data-scroll data-scroll-speed="1" src="./Home/img/city9.webp" alt="">
+    </header>
+    <main>
+        <section id="section-one">
+            <div class="wrapper">
+                <div class="top">
+                    <h2>History of Car Dependency</h2>
+                </div>
+                <div class="bottom">
+                    <div id="text-one">
+                        <h3>1910 - Origin</h3>
+                        <p>Car dependency began post-1910s as roads were built for traffic, trams were removed by the 1920s, and  infrastructures, like the Interstate Highway System, prioritized cars. The 1956 Highway Trust Fund fueled this shift, using gas taxes to expand car-based networks, locking in reliance on automobiles.</p>
+                    </div>
+                    <div id="text-two">
+                        <h3>1916 - Zoning</h3>
+                        <p>Zoning, starting with New York’s 1916 ordinance, separated residential and commercial areas, especially in suburbs, forcing car use by isolating daily needs. Parking minimums worsened this, creating sprawling, car-centric cities despite alternatives.</p>
+                    </div>
+                    <div id="text-three">
+                        <h3>2000 - Street Design</h3>
+                        <p>Street design boosts car dependency by widening roads for easy driving and adding parking, while making walking or cycling harder. This dual effect sidelines public transit, reinforcing car use over other options.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="section-two">
+                <h2>Our Mission</h2>
+                <p>We aim to shed light on the car-centric flaws of modern cities, advocating for walkable urban spaces that enhance health, reduce emissions, and boost local economies. By raising awareness, we envision communities where pedestrians thrive, sidewalks replace sprawl, and sustainable design reclaims streets from cars, fostering a vibrant, equitable living for all.</p>
+        </section>
+        <section id="section-three">
+            <div class="quote-container xSlide">
+                <div id="quote-one" data-index="0" data-status="active">
+                    <q>Walkability is what makes cities thrive. The more walkable public spaces, businesses and especially communities are, the more quality, value and happiness they provide.</q>
+                    <p>Michał Lorbiecki, Urbanist</p>
+                </div>
+                <div id="quote-two" data-index="1" data-status="inactive">
+                    <q>I was told that these cities were like this because they were designed for the car. That's not true. They weren't designed for the car, they were bulldozed for the car.</q>
+                    <p>Jason Slaughter, Not Just Bikes</p>
+                </div>
+                <div id="quote-three" data-index="2" data-status="inactive">
+                    <q>Walkability is not as much about physical proximity but rather a sense of security, inviting you to walk as an alternative form of mobility.</q>
+                    <p>Elan Mordoch, Founder at Integrated Dev.</p>
+                </div>
+                <div id="quote-four" data-index="3" data-status="inactive">
+                    <q>Walkability is the extent to which an urban area enables and encourages the movement of its people by walking.</q>
+                    <p>CITYWALK Baseline Study (2017)</p>
+                </div>
+                <div id="quote-five" data-index="4" data-status="inactive">
+                    <q>A developed country is not a place where the poor have cars. It's where the rich use public transportation.</q>
+                    <p>Gustavo Petro, President of Colombia</p>
+                </div>
+                <div id="quote-six" data-index="5" data-status="inactive">
+                    <q>A beautiful city is a walkable city - and vice versa.</q>
+                    <p>Peter Neumann, Mobility Editor</p>
+                </div>
+            </div>
+            <div class="buttons">
+                <button onclick="left()">&larr;</button>
+                <button onclick="right()">&rarr;</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="top">
+            <h1 id="h1-one">
+                <span>U</span>
+                <span>R</span>
+                <span>B</span>
+                <span>N</span>
+                <span>P</span>
+                <span>R</span>
+                <span>N</span>
+                <span>T</span>
+            </h1>
+        </div>
+        <div class="bottom">
+            <div id="bottom-one">
+                <a href="index.html"><p>Home</p></a>
+                <a href="./Issues/issues.html"><p>Issues</p></a>
+                <a href="./Solutions/solutions.html"><p>Solutions</p></a>
+                <a href="./About/about.html"><p>About</p></a>
+            </div>
+            <div id="bottom-two">
+                <p>Academy at Palumbo</p>
+                <p>Philadelphia (City of Brotherly Love)</p>
+            </div>
+            <div id="bottom-three">
+                <div class="text">
+                    <p>URBAN PRINT &nbsp;&nbsp; For More Walkable Cities &nbsp; </p>
+                </div>
+            </div>
+            <div id="bottom-four">
+                <button onclick="topFunction()">TOP</button>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<script src="./Home/script.js"></script>
+<!-- <script src="./reveal.js"></script> -->
+<script src="./Defaults/menu.js"></script>
+<script src="./Defaults/lenis.js"></script>
+</html>

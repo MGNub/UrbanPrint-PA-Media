@@ -1,0 +1,171 @@
+@property --num {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+.start-animation::after {
+    animation: counter 1.5s infinite alternate ease-in-out;
+    counter-reset: num var(--num);
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+#loadIn::after {
+    content: counter(num)"%";
+    white-space: pre;
+}
+
+@keyframes counter {
+    from { --num: 0;}
+    to { --num: 100;}
+}
+
+#loadIn {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateY(100vh);
+    width: 100%;
+    height: 100vh;
+    background: var(--white);
+    color: var(--blue);
+    font-family: Geist-Thin, sans-serif;
+    font-size: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Geist-Thin;
+    text-align: center;
+    animation: loadOut ease-in-out 3.25s;
+    z-index: 1000;
+}
+
+@keyframes loadOut {
+    0% {transform: translateY(0);} 50% {transform: translateY(0);} 100% {transform: translateY(-100);}
+}
+
+nav {
+    position: fixed;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(16, 1fr);
+    width: calc(100% - 40px);
+    height: 80px;
+    margin: 0 20px;
+    z-index: 1001;
+    mix-blend-mode: difference;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+    grid-column: 1 / 4;
+    color: var(--white);
+    font-family: Geist-Light;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+nav button {
+    margin-left: auto;
+    grid-column: 16 / 17;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    overflow: hidden;
+    background-color: transparent;
+    border: none;
+    mix-blend-mode: difference;
+}
+
+nav button svg {
+    fill: var(--white);
+}
+
+.menu {
+    position: fixed;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: fit-content;
+    height: 100vh;
+    background-color: var(--blue);
+    opacity: 0;
+    transition-property: display opacity;
+    transition-behavior: allow-discrete;
+    transition-duration: 0.3s;
+    pointer-events: none;
+    z-index: 999;
+}
+
+.active {
+    background-color: var(--white);
+    color: var(--blue);
+}
+.opened {
+    pointer-events: all;
+    opacity: 1;
+}
+
+.menu div {
+    width: 25vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+}
+
+.menu div p {
+    font-family: Geist-Thin, sans-serif;
+    font-size: 5vw;
+}
+
+.menu #one {
+    grid-column: 1 / 2;
+    border-right: 1px solid var(--white);
+}
+
+.menu #two {
+    grid-column: 2 / 3;
+    border-right: 1px solid var(--white);
+}
+
+.menu #three {
+    grid-column: 3 / 4;
+    border-right: 1px solid var(--white);
+}
+
+.menu #four {
+    grid-column: 4 / 5;
+}
+
+.menu a .item {
+    transition: all ease-in-out 0.5s;
+}
+
+.menu #one:hover,
+.menu #two:hover,
+.menu #three:hover,
+.menu #four:hover {
+    height: 100vh;
+    background-color: var(--white);
+    color: var(--blue);
+}
+
+.menu a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: var(--white);
+    text-decoration: none;
+    transition-duration: 0.2s;
+}
+
+
+.menu .current {
+    border-bottom : solid 0.1cqw;
+}
+

@@ -1,0 +1,335 @@
+body {
+    background: rgb(20, 20, 20);
+    color: white;
+}
+
+/*MAIN*/
+main {}
+
+main section {
+    height: 100vh;
+    width: 100vw;
+    background: var(--white);
+    color: var(--blue);
+}
+
+main section:nth-child(1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.4);
+    position: sticky;
+    top: 0;
+    z-index: -1;
+}
+
+main section:nth-child(1) h2 {
+    text-align: center;
+    width: fit-content;
+}
+
+main section:nth-child(1) h2 p {
+    font-size: 7rem;
+}
+
+main section:nth-child(2) {
+    position: sticky;
+    top : 0;
+    height : 100vh;
+    display : flex;
+    flex-direction : column;
+}
+
+main section:nth-child(2) .container1 {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    height : 100vh;
+    width : 100vw;
+}
+
+main section:nth-child(2) .textBox1 {
+    margin-left : 6cqw;
+}
+
+main section:nth-child(2) h2 {
+    font-size: 5rem;
+    text-shadow: 5px 0 black;
+}
+
+main section:nth-child(2) p {
+    font-size: 1.5rem;
+    margin-top: 4rem;
+    width: 60vw;
+}
+
+main section:nth-child(2) img {
+    position : relative;
+    height : 100vh;
+    width : 64vw;
+    right : 30vw;
+}
+
+
+/*MAIN - move down later*/
+/*HEADER*/
+header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    background: blue;
+    /* background : url('Images/seattleAfter.webp');
+    background-size : 100% 100vh;
+    background-blend-mode : overlay;
+    background-color : rgba(0, 0, 0, 0.5); */
+}
+
+header #left {
+    height: 100vh;
+    width: 100%;
+    background: gray;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background: url('Images/seattleBefore.webp');
+    background-size: 99vw 100vh;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* transition : all cubic-bezier(.18,.81,.45,1.07) 0.3s; */
+    transition: all cubic-bezier(.22, .88, .33, 1.1) 0.3s;
+    border-right: solid black 1px;
+}
+
+#beforeText {
+    position: absolute;
+    top: calc(100vh - 8rem);
+    left: 50vw;
+    transform: translateX(-50%);
+    /* margin-top : 3rem; */
+    color: white;
+    font-size: 5rem;
+    overflow: hidden;
+    text-shadow: 0px 0px 5px white;
+    padding: 0 1rem 0 1rem;
+    transition: all ease-in-out 0.2s;
+}
+
+#afterText {
+    position: absolute;
+    top: calc(100vh - 8rem);
+    left: 50vw;
+    transform: translateX(-50%);
+    z-index: -1;
+    color: white;
+    font-size: 5rem;
+    overflow: hidden;
+    text-shadow: 0px 0px 5px white;
+    padding: 0 1rem 0 1rem;
+    transition: all ease-in-out 0.2s;
+}
+
+.fadeDown {
+    opacity: 0;
+    translate: 0 80%;
+    pointer-events: none;
+}
+
+#beforeText::before {
+    content: 'BEFORE';
+    position: absolute;
+    width: fit-content;
+    height: 3rem;
+    margin-top: 3rem;
+    margin-left: -2rem;
+    padding: 0 5rem 0 5rem;
+    color: transparent;
+    font-size: 5rem;
+    border-bottom: solid white 3px;
+    animation: lineGrow ease-in-out 1.8s;
+    text-shadow: none;
+}
+
+#afterText::before {
+    content: 'BEFORE';
+    position: absolute;
+    width: fit-content;
+    height: 3rem;
+    margin-top: 3rem;
+    margin-left: -2rem;
+    padding: 0 1rem 0 1rem;
+    color: transparent;
+    font-size: 5rem;
+    border-bottom: solid white 3px;
+    animation: lineGrow ease-in-out 1.6s;
+    text-shadow: none;
+}
+
+header .container {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    background: green;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    overflow: hidden;
+    background: url('Images/seattleAfter.webp');
+    background-size: 100% 100vh;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    /* font-family: Geist, sans-serif; */
+    background: transparent;
+    color: white;
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    height: 20rem;
+    width: 100%;
+    font-size: 6rem;
+    font-weight: bold;
+    overflow: hidden;
+    z-index: 1;
+    text-align: center;
+    transition: transform cubic-bezier(.77, .15, .45, 1.07) 0.5s;
+}
+
+header h1 p {
+    overflow: hidden;
+    /* position : relative;
+    top : 0; */
+}
+
+header h1 .headerTitleP:nth-child(1) {
+    font-family: Geist-Thin;
+    /* color : rgb(255, 254, 175); */
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70vw;
+    font-size: 6rem;
+    outline: black 5px;
+    font-weight: 100;
+}
+
+header h1 .headerTitleP:nth-child(2) {
+    color: rgb(234, 31, 31);
+    text-shadow: 5px 5px 5px black;
+    font-family: Geist-Bold;
+    font-size: 6rem;
+}
+
+header .container .parentSticky {
+    margin-top: -2rem;
+    width: 60vw;
+    position: relative;
+    /* background : red; */
+    height: 20rem;
+    overflow: hidden;
+}
+
+.childSticky {
+    width: 60vw;
+    position: absolute;
+    top: 28rem;
+    color: white;
+    text-align: center;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    /* background : yellow; */
+}
+
+.childSticky p {
+    position: sticky;
+    display: flex;
+    align-items: center;
+    /* top : 7rem; */
+    font-size: 1.8rem;
+    font-family: Geist-Light;
+    color: white;
+    /* background : green; */
+    width: 50vw;
+    max-height: 20rem;
+    /* translate : calc(30vw - 25vw); */
+    /* text-align : center; */
+}
+
+/* #childSticky {
+    width: 60vw;
+    position: absolute;
+    top: calc(28rem + 80vh);
+    color: white;
+    text-align: center;
+    height: 80vh;
+}
+
+#childSticky p {
+    position: sticky;
+    font-size: 2.3rem;
+    color: white;
+} */
+
+@keyframes lineGrow {
+    0% {
+        transform: scaleX(0);
+    }
+
+    50% {
+        transform: scaleX(0);
+    }
+}
+
+header .container h2 p {
+    top: 0;
+    position: relative;
+    animation: slideUp cubic-bezier(.77, .15, .45, 1.07) 1.8s;
+}
+
+@keyframes slideUp {
+    0% {
+        top: 15rem;
+    }
+
+    60% {
+        top: 15rem;
+    }
+}
+
+/*ClassLists*/
+.slideUp {
+    top: 0;
+}
+
+.slideDown {
+    transform: translateY(20rem);
+}
+
+.show {
+    transform: translateX(0) translateY(0) !important;
+    opacity: 1 !important;
+}
+
+.hidden {
+    transform: translateX(0) translateY(50%);
+    opacity: 0;
+    transition: all ease-in-out 0.5s;
+}
+
+.lastSection {
+    padding-bottom: 20vh;
+}
+
+footer {
+    padding-top : 40vh;
+}

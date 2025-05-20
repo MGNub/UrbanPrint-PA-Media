@@ -1,0 +1,82 @@
+header {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    height: 100vh;
+    
+}
+
+header h1 {
+    font-family: GeistMono-Light, sans-serif;
+    font-size: calc((100vh - 60px) / 4);
+    color: var(--blue);
+}
+
+section {
+    height: 120vh;
+}
+
+.section-one {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    align-content: center;
+}
+
+.section-one h2 {
+    grid-column: 2 / 11;
+    height: fit-content;
+    padding-bottom: 5vh;
+}
+
+.section-one p {
+    grid-column: 2 / 10;
+}
+
+.section-two {
+    height: 150vh;
+    align-items: center;
+}
+
+.section-two h2 {
+    position: sticky;
+    top: 50%;
+    left: calc(50% - 17.5vw);
+    bottom: 50%;
+    width: 35vw;
+    text-align: center;
+    height: fit-content;
+}
+
+.section-two .img-container {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    border: 1px solid red;
+}
+
+.section-two .img-container .left {
+    grid-column: 2 / 6;
+    aspect-ratio: 1 / 1;
+    border: 1px solid red;
+    margin: 5vh;
+}
+
+.section-two .img-container .center {
+    grid-column: 7 / 11;
+    aspect-ratio: 1 / 1;
+    border: 1px solid red;
+    margin: 5vh;
+}
+
+.section-two .img-container .right {
+    grid-column: 12 / 16;
+    aspect-ratio: 1 / 1;
+    border: 1px solid red;
+    margin: 5vh;
+}
+
+.section-three {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+}
