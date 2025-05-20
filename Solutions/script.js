@@ -86,7 +86,7 @@ function transform(section) {
 
 window.addEventListener('scroll', function() {
   var scrollPosition = window.scrollY;
-  var div = document.getElementById('top');
+  // var div = document.getElementById('top');
   var maxWidthVw = 100;
   var windowHeight = window.innerHeight;
   var offset = 200 * windowHeight / 100;
@@ -96,5 +96,36 @@ window.addEventListener('scroll', function() {
     newWidthVw = 70;
   }
 
-  div.style.width = maxWidthVw + 'vw';
+  // div.style.width = maxWidthVw + 'vw';
+
+  const solutionsLetters = document.querySelectorAll('#head h1 span');
+  console.log(scrollPosition);
+  // solutionsLetters[5].style.opacity = '0';
+  if (scrollPosition > 1800) {
+    solutionsLetters[0].style.opacity = 0;
+    solutionsLetters[1].style.opacity = 0;
+    solutionsLetters[2].style.opacity = 0;
+  } else {
+    solutionsLetters[0].style.opacity = 1;
+    solutionsLetters[1].style.opacity = 1;
+    solutionsLetters[2].style.opacity = 1;
+  }
+  if (scrollPosition > 1640) {
+    solutionsLetters[3].style.opacity = 0;
+    solutionsLetters[4].style.opacity = 0;
+    solutionsLetters[5].style.opacity = 0;
+  } else {
+    solutionsLetters[3].style.opacity = 1;
+    solutionsLetters[4].style.opacity = 1;
+    solutionsLetters[5].style.opacity = 1;
+  }
+  if (scrollPosition > 1400) {
+    solutionsLetters[6].style.opacity = 0;
+    solutionsLetters[7].style.opacity = 0;
+    solutionsLetters[8].style.opacity = 0;
+  } else {
+    solutionsLetters[6].style.opacity = 1;
+    solutionsLetters[7].style.opacity = 1;
+    solutionsLetters[8].style.opacity = 1;
+  }
 });
