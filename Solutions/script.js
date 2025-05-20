@@ -114,17 +114,17 @@ window.addEventListener('scroll', function() {
     solutionsLetters[3].style.opacity = 0;
     solutionsLetters[4].style.opacity = 0;
     solutionsLetters[5].style.opacity = 0;
+    solutionsLetters[6].style.opacity = 0;
   } else {
     solutionsLetters[3].style.opacity = 1;
     solutionsLetters[4].style.opacity = 1;
     solutionsLetters[5].style.opacity = 1;
+    solutionsLetters[6].style.opacity = 1;
   }
   if (scrollPosition > 1400) {
-    solutionsLetters[6].style.opacity = 0;
     solutionsLetters[7].style.opacity = 0;
     solutionsLetters[8].style.opacity = 0;
   } else {
-    solutionsLetters[6].style.opacity = 1;
     solutionsLetters[7].style.opacity = 1;
     solutionsLetters[8].style.opacity = 1;
   }
