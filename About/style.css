@@ -6,6 +6,7 @@ header {
 }
 
 header h1 {
+    grid-column: 2 / 6;
     font-family: GeistMono-Light, sans-serif;
     font-size: calc((100vh - 60px) / 4);
     color: var(--blue);
@@ -25,10 +26,12 @@ section {
     grid-column: 2 / 11;
     height: fit-content;
     padding-bottom: 5vh;
+    color: var(--blue);
 }
 
 .section-one p {
     grid-column: 2 / 10;
+    color: var(--blue);
 }
 
 .section-two {
@@ -44,6 +47,7 @@ section {
     width: 35vw;
     text-align: center;
     height: fit-content;
+    color: var(--blue);
 }
 
 .section-two .img-container {
@@ -52,31 +56,38 @@ section {
     width: 100vw;
     height: 100vh;
     z-index: 1;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .section-two .img-container .left {
     grid-column: 2 / 6;
     aspect-ratio: 1 / 1;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin: 5vh;
+    width : 100%;
 }
 
 .section-two .img-container .center {
     grid-column: 7 / 11;
     aspect-ratio: 1 / 1;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin: 5vh;
+    width : 100%;
 }
 
 .section-two .img-container .right {
     grid-column: 12 / 16;
     aspect-ratio: 1 / 1;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin: 5vh;
+    width : 100%;
 }
 
 .section-three {
     display: grid;
     grid-template-columns: repeat(16, 1fr);
+}
+
+footer {
+    padding-top: 50vh;
 }
